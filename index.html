@@ -18,6 +18,9 @@
               "bike-primary": "#E76F51",
               "hero-background": "#E76F511A",
             },
+            fontFamily: {
+              manrope: ["Manrope", "sans-serif"],
+            },
           },
         },
       };
@@ -33,16 +36,57 @@
     <link rel="icon" href="" />
   </head>
 
-  <body class="font-Manrope">
+  <body class="font-manrope">
     <header class="md:container md:mx-auto">
       <nav>
         <div class="navbar bg-base-100">
           <!--mobile device-->
           <div class="navbar-start">
             <a class="btn btn-ghost font-extrabold text-4xl"
-              ><img src="./assets/arrow-up-right-011.png" alt="" />Rinterio</a
+              ><img
+                src="./assets/arrow-up-right-01.png"
+                alt="Rinterio Logo"
+              />Rinterio</a
             >
             <!--logo-->
+            <div class="dropdown lg:hidden" id="mobileDropdown">
+              <div
+                tabindex="0"
+                role="button"
+                class="btn btn-ghost"
+                id="mobileMenuBtn"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
+              </div>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                id="mobileMenu"
+                style="display: none"
+              >
+                <!--mobile device-->
+                <li>
+                  <a class="font-extrabold text-gray-700" href="#">Home</a>
+                </li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
           </div>
           <!--lg Device-->
           <div class="navbar-center hidden lg:flex">
@@ -56,7 +100,7 @@
             </ul>
           </div>
           <div class="navbar-end hidden lg:block">
-            <div class="">
+            <div>
               <div class="flex space-x-3">
                 <div>
                   <button
@@ -104,46 +148,20 @@
                 </div>
                 <a
                   class="btn font-extrabold text-xl bg-lime-400 hover:bg-lime-400 rounded-3xl"
+                  id="bookConsultBtn"
                   >Book Consult
-                  <img src="./assets/arrow-up-right-01.png" alt=""
+                  <img
+                    src="./assets/arrow-up-right-01.png"
+                    alt="Book Consult Arrow"
                 /></a>
               </div>
-            </div>
-            <div class="dropdown">
-              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16"
-                  />
-                </svg>
-              </div>
-              <ul
-                tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
-              >
-                <!--mobile device-->
-                <li><a class="font-extrabold text-gray-700">Home</a></li>
-                <li><a>Services</a></li>
-                <li><a>Portfolio</a></li>
-                <li><a>Blogs</a></li>
-                <li><a>Contact Us</a></li>
-              </ul>
             </div>
           </div>
         </div>
       </nav>
       <!--hero section-->
       <div class="">
-        <img class="mx-auto" src="./assets/banner.png" alt="" />
+        <img class="mx-auto" src="./assets/banner.png" alt="Banner" />
         <div class="">
           <div class="hero-content text-center mx-auto">
             <div class="max-w-4xl">
@@ -158,9 +176,13 @@
               </p>
               <button
                 class="btn text-lg font-bold rounded-3xl bg-lime-400 hover:bg-lime-400"
+                id="heroViewDetailsBtn"
               >
                 View Details
-                <img src="./assets/arrow-up-right-011.png" alt="" />
+                <img
+                  src="./assets/arrow-up-right-01.png"
+                  alt="View Details Arrow"
+                />
               </button>
             </div>
           </div>
@@ -297,9 +319,13 @@
         </div>
       </section>
       <!--Our Latest Portfolio-->
-      <section>
+      <section id="portfolio">
         <div class="space-y-4 text-center">
-          <img class="mx-auto" src="./assets/Framffe 14 (1).png" alt="" />
+          <img
+            class="mx-auto"
+            src="./assets/Frame 14 (1).png"
+            alt="Portfolio"
+          />
           <h1 class="font-extrabold text-5xl">Our Latest Portfolio</h1>
           <p>
             The barn house captivates with its blend of rustic charm and modern
@@ -319,7 +345,9 @@
                 <br />and modern. The barn house captivates with its blend of
                 <br />rustic charm and modern .
               </p>
-              <a class="flex text-lg font-bold bg-white"
+              <a
+                class="flex text-lg font-bold bg-white view-details-btn"
+                href="javascript:void(0);"
                 >View Details<img
                   class="ml-3"
                   src="./assets/arrow-up-right-011.png"
@@ -346,7 +374,9 @@
                 and <br />
                 modern.
               </p>
-              <a class="flex text-lg font-bold bg-white"
+              <a
+                class="flex text-lg font-bold bg-white view-details-btn"
+                href="javascript:void(0);"
                 >View Details<img
                   class="ml-3"
                   src="./assets/arrow-up-right-011.png"
@@ -448,9 +478,14 @@
           </p>
         </div>
         <div class="flex items-center flex-col">
-          <div class="mt-2">
+          <form class="mt-2" id="contactForm">
             <label class="input input-bordered flex items-center gap-2">
-              <input type="text" class="grow" placeholder="Search" />
+              <input
+                type="text"
+                class="grow"
+                placeholder="Search"
+                name="search"
+              />
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 16 16"
@@ -478,7 +513,12 @@
                   d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z"
                 />
               </svg>
-              <input type="text" class="grow" placeholder="Email" />
+              <input
+                type="text"
+                class="grow"
+                placeholder="Email"
+                name="email"
+              />
             </label>
             <label class="input input-bordered flex items-center gap-2">
               <svg
@@ -491,7 +531,12 @@
                   d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"
                 />
               </svg>
-              <input type="text" class="grow" placeholder="Username" />
+              <input
+                type="text"
+                class="grow"
+                placeholder="Username"
+                name="username"
+              />
             </label>
             <label class="input input-bordered flex items-center gap-2">
               <svg
@@ -506,16 +551,30 @@
                   clip-rule="evenodd"
                 />
               </svg>
-              <input type="password" class="grow" value="password" />
+              <input
+                type="password"
+                class="grow"
+                value="password"
+                name="password"
+              />
             </label>
-          </div>
+            <button
+              type="submit"
+              class="btn mt-4 bg-lime-400 rounded-3xl font-bold"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </section>
     </main>
     <footer class="footer footer-center bg-black text-primary-content p-10">
       <aside class="space-y-5 text-gray-300">
         <a class="btn btn-ghost font-extrabold text-4xl"
-          ><img src="./assets/arrow-up-right-011.png" alt="" />Rinterio</a
+          ><img
+            src="./assets/arrow-up-right-01.png"
+            alt="Rinterio Logo"
+          />Rinterio</a
         >
         <p class="font-semibold">
           The barn house captivates with its blend of rustic charm and modern
@@ -533,10 +592,12 @@
         <div class="grid grid-flow-col gap-4">
           <a
             class="btn font-extrabold text-xl bg-lime-400 hover:bg-lime-400 rounded-3xl"
-            >Book Consult <img src="./assets/arrow-up-right-01.png" alt=""
+            >Book Consult
+            <img src="./assets/arrow-up-right-01.png" alt="Book Consult Arrow"
           /></a>
         </div>
       </nav>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
