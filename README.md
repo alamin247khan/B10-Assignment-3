@@ -75,7 +75,7 @@
 1. **Clone the repository**
    ```bash
    git clone https://github.com/alamin247khan/B10-Assignment-03.git
-   cd rinterio
+   cd B10-Assignment-03
    ```
 2. **Open `index.html` in your browser**
 3. **Explore the responsive design** by resizing your browser window
