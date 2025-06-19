@@ -20,8 +20,7 @@
 
 ## 🚀 Live Demo
 
-> **[View the Demo](https://b10-assignment-03-owp4nyfr6-md-al-amins-projects-a9dc93ea.vercel.app/)**  
-> *(Replace with your live site URL if deployed)*
+> **[View the Demo](https://b10-assignment-03-owp4nyfr6-md-al-amins-projects-a9dc93ea.vercel.app/)**
 
 ---
 
